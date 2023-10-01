@@ -33,7 +33,7 @@
     <div class="hero-body">
       <div class="container">
         <figure class="teaser">
-          <img class="teaser-image" style='height: auto; width: 60%; object-fit: contain' src="static/images/logo_main_trans.png"/>
+          <img class="teaser-image" style='height: auto; width: 45%; object-fit: contain' src="static/images/logo_main_trans.png"/>
         </figure>
       </div>
     </div>
@@ -51,10 +51,10 @@
               <a href="https://scholar.google.com/citations?hl=en&user=lhp9mRgAAAAJ&view_op=list_works&sortby=pubdate">Mustafa Shukor<sup>a</sup></a>, 
             </span>
             <span class="author-block">
-              <a href="https://cdancette.fr/">Corentin Dancette<sup>a</sup></a>, 
+              <a href="https://alexrame.github.io/">Alexandre Rame<sup>a</sup></a>, 
             </span>
             <span class="author-block">
-              <a href="https://alexrame.github.io/">Alexandre Rame<sup>a</sup></a>, 
+              <a href="https://cdancette.fr/">Corentin Dancette<sup>a</sup></a>, 
             </span>
             <span class="author-block">
               <a href="https://cord.isir.upmc.fr/">Matthieu Cord<sup>a,b</sup></a>
@@ -139,7 +139,7 @@
         <!-- <div id="results-carousel" class="carousel results-carousel"> -->
 
         <figure class="teaser">
-          <img class="teaser-image" style='height: auto; width: 100%; object-fit: contain' src="static/images/main-1.png"/>
+          <img class="teaser-image" style='height: auto; width: 90%; object-fit: contain' src="static/images/main-1.png"/>
           <!-- <figcaption class="teaser-overlay">
             <div class="teaser-meta">
               <span class="teaser-title">This is.</span>
@@ -162,7 +162,7 @@
   
           <span class="dnerf"></span>
           EvALign-ICL is an evaluation framework for large multimodal models (LMMs). 
-          Currently, it evaluate LMMs on 5 different axes; object hallucinations, answer abstention, compositionality, explainabilty and 
+          Currently, the evaluation of LMMs spans 5 different axes; object hallucinations, answer abstention, compositionality, explainabilty and 
           instruction following. We propose 3 setups; zero-shot, in-context learning (ICL) and different variants of ICL (X-ICL).
         </font>
       </div>
@@ -240,7 +240,8 @@
             reveals major flaws in LMMs. To efficiently address these problems, and inspired by the success of 
             in-context learning (ICL) in LLMs, (2) <strong>we explore ICL as a solution and study how it affects these limitations</strong>. 
             Based on our ICL study, (3) <strong>we push ICL further and propose new multimodal ICL approaches such as; 
-            Multitask-ICL, Chain-of-Hindsight-ICL, and Self-Correcting-ICL</strong>. <strong><i>Our findings</i></strong> are as follows. 
+            Multitask-ICL, Chain-of-Hindsight-ICL, and Self-Correcting-ICL</strong>.  
+            <strong><i>Our findings</i></strong> are as follows. 
             (1) Despite their success, LMMs have flaws that remain unsolved with scaling alone. 
             (2) The effect of ICL on LMMs flaws is nuanced; despite its effectiveness for improved explainability, 
             abstention, and instruction following, ICL does not improve compositional abilities, and actually 
@@ -257,31 +258,37 @@
 <br>
 <br>
 
-<section class="section">
-  <div class="columns is-centered">
-    <div class="column is-four-fifths">
-      <h3 class="title is-3">Findings</h3>
-      <div class="content has-text-justified">
-        <p>
-          <ul>
 
-          <li><strong><i>Finding 1</i></strong>. LMMs suffer from severe hallucinations. A small number of ICL shots partially alleviate it, while increasing them exacerbates the problem. Pretraining on more high-quality data and unfreezing the LLM weights helps to reduce hallucinations.</li>
 
-          <li><strong><i>Finding 2</i></strong>. LMMs give more likely incorrect answers than abstaining. ICL helps them abstain. Larger models, better quality data, and unfreezing LM weights improve abstention.</li>
-      
-          <li><strong><i>Finding 3</i></strong>. LMMs lack compositional ability and struggle to acquire them even with ICL.</li>
-      
-          <li><strong><i>Finding 4</i></strong>. LMMs still fail to provide good explanations, yet ICL can improve performances. Bigger models explain better.</li>
-
-          <li><strong><i>Finding 5</i></strong>. LMMs do not precisely follow user instructions, but ICL makes them more helpful.</li>
-
-        </ul>
-        </p>
-      </div>
-    </div>
+<section class="section hero is-small">
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">Findings</h2>
   </div>
 
-</section>
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p> 
+            <ul>
+
+              <li><strong><i>Finding 1</i></strong>. LMMs suffer from severe hallucinations. A small number of ICL shots partially alleviate it, while increasing them exacerbates the problem. Pretraining on more high-quality data and unfreezing the LLM weights helps to reduce hallucinations.</li>
+    
+              <li><strong><i>Finding 2</i></strong>. LMMs give more likely incorrect answers than abstaining. ICL helps them abstain. Larger models, better quality data, and unfreezing LM weights improve abstention.</li>
+          
+              <li><strong><i>Finding 3</i></strong>. LMMs lack compositional ability and struggle to acquire them even with ICL.</li>
+          
+              <li><strong><i>Finding 4</i></strong>. LMMs still fail to provide good explanations, yet ICL can improve performances. Bigger models explain better.</li>
+    
+              <li><strong><i>Finding 5</i></strong>. LMMs do not precisely follow user instructions, but ICL makes them more helpful.</li>
+    
+            </ul>
+          </p>
+        </div>
+      </div>
+  </div>
+  
+<br>
+<br>
 
 
 
@@ -293,14 +300,14 @@
   <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
-          <p> CWe consider 8 different models from OpenFlamingo (OF) and IDEFICS (up to 9B parameters) as described in the table below</p>
+          <p> We consider 8 different models from OpenFlamingo (OF) and IDEFICS (up to 9B parameters) as described in the table below</p>
         </div>
       </div>
   </div>
   
   <figure class="teaser center">
     <div align="center" style="margin-top:0px; margin-bottom:0px;">
-      <img class="teaser-image" style='height: auto; width: 40%; object-fit: contain' src="static/images/models.png"/>
+      <img class="teaser-image" style='height: auto; width: 50%; object-fit: contain' src="static/images/models.png"/>
       <figcaption class="teaser-overlay">
         <div class="teaser-meta">
           <span class="teaser-title"><i> We evaluate 8 models that differ in size, training data, and LLM initialization. Tr: training/trainable. Inst.: instruction. P/D: image-text pairs/web documents. $*$ use additional ChatGPT data.</i></span>
@@ -316,7 +323,7 @@
 
 
 <!-- Evaluation results -->
-<section class="section grey">
+<section class="section hero is-small">
   <div class="columns is-centered has-text-centered">
     <h2 class="title is-3">Object Hallucinations (Truthfulness, Harmlessness)</h2>
   </div>
@@ -352,7 +359,7 @@
 <br>
 
 
-<section class="section">
+<section class="section hero is-small">
   <div class="columns is-centered has-text-centered">
     <h2 class="title is-3">Answer Abstention (Honesty)</h2>
   </div>
@@ -386,7 +393,7 @@
 <br>
 
 
-<section class="section grey">
+<section class="section hero is-small">
   <div class="columns is-centered has-text-centered">
     <h2 class="title is-3">Compositionality (Generalization and Understanding)</h2>
   </div>
@@ -407,7 +414,7 @@
   
   <figure class="teaser center">
     <div align="center" style="margin-top:0px; margin-bottom:0px;">
-      <img class="teaser-image" style='height: auto; width: 40%; object-fit: contain' src="static/images/compo_combined.png"/>
+      <img class="teaser-image" style='height: auto; width: 80%; object-fit: contain' src="static/images/compo_combined.png"/>
       <figcaption class="teaser-overlay">
         <div class="teaser-meta">
           <span class="teaser-title"><i>Compositionality. Models are evaluated on the CREPE benchmark with the ITM task. 
@@ -424,7 +431,7 @@
 
 
 
-<section class="section">
+<section class="section hero is-small">
   <div class="columns is-centered has-text-centered">
     <h2 class="title is-3">Explainability (Helpfulness)</h2>
   </div>
@@ -445,7 +452,7 @@
   
   <figure class="teaser center">
     <div align="center" style="margin-top:0px; margin-bottom:0px;">
-      <img class="teaser-image" style='height: auto; width: 40%; object-fit: contain' src="static/images/vqax_cider.jpg"/>
+      <img class="teaser-image" style='height: auto; width: 35%; object-fit: contain' src="static/images/vqax_cider.jpg"/>
       <figcaption class="teaser-overlay">
         <div class="teaser-meta">
           <span class="teaser-title"><i>Explainability. Models are asked to generate an explanation for image, question and answer triplets from the VQA-X dataset.</i></span>
@@ -458,7 +465,7 @@
 <br>
 
 
-<section class="section grey">
+<section class="section hero is-small">
   <div class="columns is-centered has-text-centered">
     <h2 class="title is-3">Instruction Following (Helpfulness)</h2>
   </div>
@@ -482,7 +489,7 @@
   
   <figure class="teaser center">
     <div align="center" style="margin-top:0px; margin-bottom:0px;">
-      <img class="teaser-image" style='height: auto; width: 40%; object-fit: contain' src="static/images/all_inst_1-1.png"/>
+      <img class="teaser-image" style='height: auto; width: 80%; object-fit: contain' src="static/images/all_inst_1-1.png"/>
       <figcaption class="teaser-overlay">
         <div class="teaser-meta">
           <span class="teaser-title"><i>Instruction following. Qualitative evaluation results of IDEFICS and OFv2-9B on the 
@@ -495,6 +502,7 @@
 
 <br>
 <br>
+
 
 
 
@@ -513,7 +521,7 @@
   
   <figure class="teaser center">
     <div align="center" style="margin-top:0px; margin-bottom:0px;">
-      <img class="teaser-image" style='height: auto; width: 40%; object-fit: contain' src="static/images/coh_icl.png"/>
+      <img class="teaser-image" style='height: auto; width: 60%; object-fit: contain' src="static/images/coh_icl.png"/>
       <figcaption class="teaser-overlay">
         <div class="teaser-meta">
           <span class="teaser-title"><i>Chain of Hindsight (CoH) is an alternative approach for aligning LLMs to human preferences. 
@@ -528,10 +536,12 @@
     </div>
   </figure>
 
+  <br>
+  <br>
 
   <figure class="teaser center">
     <div align="center" style="margin-top:0px; margin-bottom:0px;">
-      <img class="teaser-image" style='height: auto; width: 40%; object-fit: contain' src="static/images/sc_icl.png"/>
+      <img class="teaser-image" style='height: auto; width: 60%; object-fit: contain' src="static/images/sc_icl.png"/>
       <figcaption class="teaser-overlay">
         <div class="teaser-meta">
           <span class="teaser-title"><i>Recently, self-correction in LLMs has received large attention. 
@@ -545,11 +555,13 @@
       </figcaption>
     </div>
   </figure>
+  <br>
+  <br>
 
 
   <figure class="teaser center">
     <div align="center" style="margin-top:0px; margin-bottom:0px;">
-      <img class="teaser-image" style='height: auto; width: 40%; object-fit: contain' src="static/images/mt_icl.png"/>
+      <img class="teaser-image" style='height: auto; width: 60%; object-fit: contain' src="static/images/mt_icl.png"/>
       <figcaption class="teaser-overlay">
         <div class="teaser-meta">
           <span class="teaser-title"><i>Multitask learning aims at leveraging the 
@@ -572,7 +584,7 @@
 
 
 
-<section class="section grey">
+<figure class="teaser center">
   <div class="columns is-centered">
     <div class="column is-four-fifths">
       <h3 class="title is-3">Acknowledgements</h3>
