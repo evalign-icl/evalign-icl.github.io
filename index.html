@@ -40,7 +40,7 @@
   </div>
 </div>  
 
-<section class="hero" style="margin-top: 10px;">
+<section class="hero" style="margin-top: 0px;">
   <div class="hero-body publication-header">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -234,7 +234,9 @@
             are hardly captured by the current evaluation benchmarks. Indeed, task performances (\emph{e.g.}, VQA accuracy) 
             alone do not provide enough clues to understand their real capabilities, limitations, and to which extent 
             such models are aligned to human expectations. To refine our understanding of those flaws, we deviate from 
-            the current evaluation paradigm and propose the <strong>EvALign-ICL</strong> framework, in which (1) we <strong>evaluate 8 recent open-source LMMs</strong> (based on the 
+            the current evaluation paradigm and propose the <strong>EvALign-ICL</strong> framework 
+            (Beyond Task Performance: <strong>Eval</strong>uat<strong>i</strong>n<strong>g</strong> and Reduci<strong>n</strong>g the Flaws of Large 
+            Multimodal Models with <strong>I</strong>n-<strong>C</strong>ontext <strong>L</strong>earning), in which (1) we <strong>evaluate 8 recent open-source LMMs</strong> (based on the 
             Flamingo architecture such as OpenFlamingo and IDEFICS) on 5 different axes; <strong>hallucinations, 
             abstention, compositionality, explainability and instruction following</strong>. Our evaluation on these axes 
             reveals major flaws in LMMs. To efficiently address these problems, and inspired by the success of 
@@ -311,7 +313,7 @@
       <img class="teaser-image" style='height: auto; width: 50%; object-fit: contain' src="static/images/models.png"/>
       <figcaption class="teaser-overlay">
         <div class="teaser-meta">
-          <span class="teaser-title"><i> We evaluate 8 models that differ in size, training data, and LLM initialization. Tr: training/trainable. Inst.: instruction. P/D: image-text pairs/web documents. $*$ use additional ChatGPT data.</i></span>
+          <span class="teaser-title"><i> We evaluate 8 models that differ in size, training data, and LLM initialization. Tr: training/trainable. Inst.: instruction. P/D: image-text pairs/web documents. * use additional ChatGPT data.</i></span>
         </div>
       </figcaption>
     </div>
