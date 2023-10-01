@@ -40,7 +40,7 @@
   </div>
 </div>  
 
-<section class="hero">
+<section class="hero" style="margin-top: 10px;">
   <div class="hero-body publication-header">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -234,7 +234,7 @@
             are hardly captured by the current evaluation benchmarks. Indeed, task performances (\emph{e.g.}, VQA accuracy) 
             alone do not provide enough clues to understand their real capabilities, limitations, and to which extent 
             such models are aligned to human expectations. To refine our understanding of those flaws, we deviate from 
-            the current evaluation paradigm and propose the EvALign-ICL framework, in wich (1) we <strong>evaluate 8 recent open-source LMMs</strong> (based on the 
+            the current evaluation paradigm and propose the <strong>EvALign-ICL</strong> framework, in which (1) we <strong>evaluate 8 recent open-source LMMs</strong> (based on the 
             Flamingo architecture such as OpenFlamingo and IDEFICS) on 5 different axes; <strong>hallucinations, 
             abstention, compositionality, explainability and instruction following</strong>. Our evaluation on these axes 
             reveals major flaws in LMMs. To efficiently address these problems, and inspired by the success of 
@@ -287,6 +287,7 @@
       </div>
   </div>
   
+</section>
 <br>
 <br>
 
@@ -315,7 +316,7 @@
       </figcaption>
     </div>
   </figure>
-
+</section>
 <br>
 <br>
 
@@ -337,7 +338,8 @@
             Addressing OH is critical to avoid any harm, especially in critical applications (\emph{e.g.} autonomous 
             driving or medical imaging). We evaluate the various LMMs for captioning on the COCO dataset. Overall accuracy is measured 
             with CIDEr. In addition, to capture OH, we report the CHAIRs metric 
-            comparing the objects referred in the generated captioning to those actually in the image.  
+            comparing the objects referred in the generated captioning to those actually in the image.    
+
             <strong><i>Finding 1</i></strong>. LMMs suffer from severe hallucinations. A small number of ICL shots partially alleviate it, while increasing them exacerbates the problem. 
             Pretraining on more high-quality data and unfreezing the LLM weights helps to reduce hallucinations.</p>
         </div>
@@ -371,7 +373,8 @@
             Here we study a scenario where the question can not be answered from the image. We evaluate on TDIUC, 
             a VQA dataset containing absurd questions ($\sim22\%$ of a total number of questions), that are not related to 
             the image and thus should not be answered. In case of abstention, the model should generate a specific keyword. 
-            We report the overall accuracy in addition to the F1-score abstention metric (absurd question or not).  
+            We report the overall accuracy in addition to the F1-score abstention metric (absurd question or not).   
+
             <strong><i>Finding 2</i></strong>. LMMs give more likely incorrect answers than abstaining. ICL helps them abstain. 
             Larger models, better quality data, and unfreezing LM weights improve abstention.</p>
         </div>
@@ -407,6 +410,7 @@
             changing the composition of the ground truth captions. Instead of retrieval, we create the task of 
             Image-Text Matching (ITM). For ITM the model is given one caption and asked to decide if it describes the 
             image or not. We use the positive and negative captions provided by the benchmark.    
+
             <strong><i>Finding 3</i></strong>. LMMs lack compositional ability and struggle to acquire them even with ICL.</p>
         </div>
       </div>
@@ -444,7 +448,8 @@
             internal activations and learned features as means of output explanation, 
             we try another and more explicit approach; by asking the model itself for an explanation. We consider VQA-X, 
             a VQA dataset with human-annotated explanations for each image-question-answer triplets, and CIDEr as 
-            the metric to measure the syntactic similarity between the generated explanations and the ground truths.
+            the metric to measure the syntactic similarity between the generated explanations and the ground truths.    
+
             <strong><i>Finding 4</i></strong>. LMMs still fail to provide good explanations, yet ICL can improve performances. Bigger models explain better.</p>
         </div>
       </div>
@@ -481,7 +486,8 @@
             wherein the model is fine-tuned on curated instruction datasets. We evaluate LMMs on the LlaVA dataset, 
             which contains 3 types of instructions; giving detailed image descriptions, and answering 
             complex questions and conversations. These instructions are generated with GPT-4 (text-only). For ICL, the demonstrations 
-            are selected randomly from the dataset with the same instruction type as the query.  
+            are selected randomly from the dataset with the same instruction type as the query.   
+
             <strong><i>Finding 5</i></strong>. LMMs do not precisely follow user instructions, but ICL makes them more helpful.</p>
         </div>
       </div>
@@ -499,14 +505,14 @@
       </figcaption>
     </div>
   </figure>
-
+</section>
 <br>
 <br>
 
 
 
 
-<section class="section">
+<section class="section grey">
   <div class="columns is-centered has-text-centered">
     <h2 class="title is-3">X-ICL: New Multimodal ICL Variants</h2>
   </div>
@@ -576,7 +582,7 @@
       </figcaption>
     </div>
   </figure>
-
+</section>
 <br>
 <br>
 
@@ -584,7 +590,7 @@
 
 
 
-<figure class="teaser center">
+<section class="section hero is-small">
   <div class="columns is-centered">
     <div class="column is-four-fifths">
       <h3 class="title is-3">Acknowledgements</h3>
